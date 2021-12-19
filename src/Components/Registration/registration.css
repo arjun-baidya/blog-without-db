@@ -1,0 +1,12 @@
+.registration-form {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+.login-link{
+    text-align: center;
+    margin-top: 20px;
+    padding-left: 30px;
+    text-decoration: none;
+}
