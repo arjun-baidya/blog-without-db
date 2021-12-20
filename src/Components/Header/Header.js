@@ -16,12 +16,11 @@ function Header() {
         <div>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
-            <Navbar.Brand href="#home">Blog-Using-LocalStorage</Navbar.Brand>
+            <Navbar.Brand href="/">Blog-Using-LocalStorage</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto">
                 <Nav.Link href="/blog">Blogs</Nav.Link>
-                <Nav.Link href="#pricing">Pricing</Nav.Link>
                 </Nav>
                 <Nav>
                 {

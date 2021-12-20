@@ -1,6 +1,7 @@
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
 import './App.css';
 import PostBlog from "./Components/Blog/PostBlog";
+import ShowBlog from "./Components/Blog/ShowBlog";
 import Header from './Components/Header/Header';
 import Login from "./Components/Login/Login";
 import Registration from "./Components/Registration/Registration";
@@ -16,6 +17,7 @@ function App() {
           <Route path="/registration" element={<Registration/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/postBlog" element={<PostBlog/>} />
+          <Route path="/blog" element={<ShowBlog/>} />
         </Routes>
       </Router>
     </div>

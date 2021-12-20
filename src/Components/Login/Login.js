@@ -18,6 +18,7 @@ function Login() {
         setEmail(loginuser.email);
         setPass(loginuser.password);
         localStorage.setItem('loginuser', JSON.stringify(loginuser));
+        window.location.href = '/'
     }
 
     let loggedinuser = JSON.parse(localStorage.getItem('loginuser'));
@@ -35,7 +36,7 @@ function Login() {
                 <Form className='registration-form' onSubmit={handleLogin} >
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" name='email' placeholder="Enter email" />
+                    <Form.Control type="email" name='email' value={registereduser.email} placeholder="Enter email" />
                     <Form.Text className="text-muted">
                     We'll never share your email with anyone else.
                     </Form.Text>
@@ -43,7 +44,7 @@ function Login() {
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" name='password' placeholder="Password" />
+                    <Form.Control type="password" name='password' value={registereduser.password} placeholder="Password" />
                 </Form.Group>
                 <Button variant="primary" type="submit" >
                     Submit

@@ -3,7 +3,9 @@ import { Button, Container, Form } from 'react-bootstrap'
 import './postblog.css'
 
 function PostBlog() {
-    const [blogData, setBlogData] = useState([])
+
+    let data = JSON.parse(localStorage.getItem('blogData'));
+    const [blogData, setBlogData] = useState(data || [])
     console.log(blogData)
 
     const handleSubmitBlog = (e) => {
@@ -13,21 +15,15 @@ function PostBlog() {
             title: e.target.title.value,
             content: e.target.content.value
         }
-        // setBlogData([...blogData, blog])
-        setBlogData(blog.blogData)
-        // e.target.title.value = "";
-        // e.target.content.value = "";
+        setBlogData([...blogData,blog])
+        e.target.title.value = "";
+        e.target.content.value = "";
         console.log(blog)
-
-        localStorage.setItem('blogData', JSON.stringify(blogData))
-        // redirect to home page
-        // window.location.href = '/'
     }
 
-    // useEffect(() => {
-    //     const json = JSON.stringify(blogData);
-    //     localStorage.setItem("blogData", json);
-    // }, [])
+    useEffect(() => {
+        localStorage.setItem('blogData', JSON.stringify(blogData))
+    },)
 
     return (
         <div>

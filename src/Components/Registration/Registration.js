@@ -20,7 +20,7 @@ function Registration() {
         setEmail(user.email);
         setPass(user.password);
         localStorage.setItem('user', JSON.stringify(user));
-
+        window.location.href = '/login'
     }
 
 
